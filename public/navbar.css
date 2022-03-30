@@ -1,0 +1,207 @@
+.logo {
+    font-size: 30px;
+    font-family: "Noteworthy";
+    -webkit-text-stroke: 0.6px black;
+    float: left;
+    margin: 10px 0 0 100px;
+  }
+  .discord{
+    cursor: not-allowed;
+  pointer-events: none;
+  }
+  .sr-only {
+    display: none;
+  }
+  .primary-navigation {
+    padding-left: 525px;
+    padding-top: 20px;
+    margin-left: 20px;
+  }
+  .social {
+    display: inline;
+  }
+  .twitter{
+    padding-top: 5px;
+    margin-right: 20px;
+  }
+  header {
+    /* box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.3); */
+    position: sticky;
+    top: 0px;
+    /* background: hsl(30 100% 96% / 0.4); */
+    z-index: 2;
+    height: 70px;
+    align-items: center;
+    width: auto;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+  nav {
+    min-height: 10vh;
+    font-family: "Noteworthy";
+    /* margin-top: auto; */
+    margin-left: 0px;
+    margin-right: 0px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+    font-weight: 550;
+    /* background-color: #F9E0D7; */
+    /* background-color: #ffd2ea; */
+    /* background: 	hsl(328, 100%, 91%/ 1); */
+    /* background-color: rgba(255, 210, 234, 0.6); */
+    /* background-color: rgba(255, 194, 223, 0.6) */
+    background-color:rgba(249, 224, 215, 0.6);
+  
+  }
+  nav h1{
+    margin-left: 50px;
+    width: 50%;
+  }
+  nav h1,
+  nav ul {
+    margin-top: -20px;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    flex: 1;
+    padding-right: 100px;
+    z-index: 5;
+    /* margin-left: -10px; */
+  }
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    z-index: 5;
+  }
+  
+  nav a {
+    color: black;
+    text-decoration: none;
+  }
+@media screen and (max-width: 991px){
+    .logo{
+        margin-left: 10%;
+      }
+      .primary-navigation{
+        padding-left: 10%;
+        padding-right: 5%;
+      }
+      nav{
+        justify-content: space-between;
+      }
+}
+@media screen and (max-width: 479px){
+    .logo{
+        align-items: center;
+        padding-top: 5%;
+        margin: -20px 0 0 50px;
+        padding-top: 10%;
+      }
+      .sr-only {
+        display: block;
+      }
+      .mobile-nav-toggle-top {
+        position: absolute;
+        z-index: 10;
+        /* background-color: transparent;
+        background-image: url(images/hamburger-menu.png);
+        background-repeat: no-repeat; */
+        width: 2rem;
+        border: 0;
+        aspect-ratio: 1;
+        top: 1.5rem;
+        right: 2rem;
+        margin-top:10px ;
+        
+      }
+      nav a {
+        color: black;
+      }
+    input[type="checkbox"] {
+        -webkit-appereance: none;
+        visibility: hidden;
+        display: none;
+      }
+    
+      .bar {
+        position: relative;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        padding-bottom: -20px;
+      }
+    
+      .bar .middle {
+        height: 3px;
+        width: 20px;
+        background: black;
+        border-radius: 2px;
+        position: absolute;
+        transition: 0.3s ease;
+      }
+    
+      .bar .top {
+        bottom: 3px;
+        height: 3px;
+        width: 20px;
+        background: black;
+        border-radius: 2px;
+        position: absolute;
+        transition: 0.3s ease;
+      }
+    
+      .bar .bottom {
+        top: 6px;
+        height: 3px;
+        width: 20px;
+        background: black;
+        border-radius: 2px;
+        position: absolute;
+        transition: 0.3s ease;
+      }
+    
+        .top[aria-expanded="true"]{
+        transform: rotate(-45deg);
+        transform-origin: right;
+        width: 30px;
+        top: -10px;
+      }
+    
+    
+      .bottom[aria-expanded="true"]{
+        transform: rotate(45deg);
+        transform-origin: right;
+        width: 30px;
+        top: 12px;
+      }
+      .middle[aria-expanded="true"]{
+        transform: translateX(20px);
+        opacity: 0;
+      }
+      .bubble {
+        display: none;
+      }
+      .primary-navigation {
+        z-index: 5;
+        position: fixed;
+        inset: 0 0 0 30%;
+        align-items: center;
+        flex-direction: column;
+        padding: min(30vh, 10rem) 2em;
+        background: hsl(0 0% 100% / 0.1);
+        backdrop-filter: blur(1rem);
+        transform: translateX(100%);
+        transition: transform 350ms ease-out;
+      }
+      .primary-navigation[data-visible="true"] {
+        transform: translateX(0%);
+      }
+      header {
+    align-items: center;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
